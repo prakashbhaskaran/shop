@@ -6,7 +6,7 @@ import { Container, Wrapper, Img } from "../../styles/global";
 import Layout from "../../Layout";
 
 const Product = () => {
-  const { items, addtocart } = useContext(ProductContext);
+  const { items, addtocart, removefromcart } = useContext(ProductContext);
   const { id } = useParams();
 
   let item = items.filter((item) => item.productid === Number(id));
@@ -31,14 +31,15 @@ const Product = () => {
                 Rate : $
                 {item[0] !== undefined ? `${item[0].price}` : "Loading..."}{" "}
               </Price>
-              <Add
-                disabled={item[0] !== undefined && item[0].added ? true : false}
-                onClick={() => addtocart(item[0].productid)}
-              >
-                {item[0] !== undefined && item[0].added
-                  ? "Added"
-                  : "Add to cart  "}
-              </Add>
+              {!item[0].added ? (
+                <Add onClick={() => addtocart(item[0].productid)}>
+                  Add to cart
+                </Add>
+              ) : (
+                <Add onClick={() => removefromcart(item[0].productid)}>
+                  Remove from cart
+                </Add>
+              )}
             </Info>
           </Grid>
         </Wrapper>
