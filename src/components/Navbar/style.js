@@ -11,6 +11,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  z-index: 1;
 `;
 
 export const List = styled.ul`

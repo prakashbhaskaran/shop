@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Grid = styled.div`
   display: grid;
@@ -17,6 +17,9 @@ export const Info = styled.div`
   gap: 20px;
 `;
 
+const spinner = keyframes`100% {
+  transform: translateX(100%);
+}`;
 export const Image = styled.div`
   width: 400px;
   height: 600px;
@@ -24,23 +27,19 @@ export const Image = styled.div`
   position: relative;
   overflow: hidden;
   background: #c1c1c1;
-  ::before {
-  content: "";
-  position: absolute;
-  display: ${(props) => (props.display ? "none" : "block")};
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, transparent, #d7d7d7, transparent);
-  transform: translateX(-100%);
-  animation: loading 0.5s infinite;
-  }
-  @keyframes loading {
-  100% {
-    transform: translateX(100%);
-  }
   @media screen and (max-width: 978px) {
     width: 100%;
     height: 100%;
+  }
+  ::before {
+    content: "";
+    position: absolute;
+    display: ${(props) => (props.display ? "none" : "block")};
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #d7d7d7, transparent);
+    transform: translateX(-100%);
+    animation: ${spinner} 0.5s infinite;
   }
 `;
 
@@ -58,6 +57,7 @@ export const Price = styled.p`
 `;
 
 export const Add = styled.button`
+  display: ${(props) => props.display};
   font-weight: 600;
   width: 100%;
   height: 40px;

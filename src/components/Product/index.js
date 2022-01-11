@@ -31,15 +31,30 @@ const Product = () => {
                 Rate : $
                 {item[0] !== undefined ? `${item[0].price}` : "Loading..."}{" "}
               </Price>
-              {!item[0].added ? (
-                <Add onClick={() => addtocart(item[0].productid)}>
-                  Add to cart
-                </Add>
-              ) : (
-                <Add onClick={() => removefromcart(item[0].productid)}>
-                  Remove from cart
-                </Add>
-              )}
+              <Add
+                onClick={() => addtocart(item[0].productid)}
+                display={
+                  item[0] === undefined
+                    ? "none"
+                    : item[0].added
+                    ? "none"
+                    : "block"
+                }
+              >
+                Add to cart
+              </Add>
+              <Add
+                onClick={() => removefromcart(item[0].productid)}
+                display={
+                  item[0] === undefined
+                    ? "none"
+                    : item[0].added
+                    ? "block"
+                    : "none"
+                }
+              >
+                Remove from cart
+              </Add>
             </Info>
           </Grid>
         </Wrapper>
