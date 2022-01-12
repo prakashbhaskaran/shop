@@ -21,7 +21,7 @@ const Cart = () => {
           <Wrapper>
             <Div> Empty cart</Div>
             <GlobalLink color="black" to="/products">
-              Go to shop
+              Go to products
             </GlobalLink>
           </Wrapper>
         )}

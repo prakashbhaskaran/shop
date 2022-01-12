@@ -48,8 +48,9 @@ export const NavIcon = styled.div`
   display: none;
   color: white;
   transition: all 0.3s linear;
+  position: relative;
   :hover {
-    color: ${primary};
+    opacity: 0.8;
   }
   @media screen and (max-width: 540px) {
     display: initial;

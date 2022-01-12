@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ProductContext } from "../../Context/ProductProvider";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { Add, Grid, Image, Info, Name, Price } from "./style";
 import { Container, Wrapper, Img } from "../../styles/global";
 import Layout from "../../Layout";
@@ -8,7 +8,7 @@ import Layout from "../../Layout";
 const Product = () => {
   const { items, addtocart, removefromcart } = useContext(ProductContext);
   const { id } = useParams();
-
+  const navigate = useNavigate();
   let item = items.filter((item) => item.productid === Number(id));
   if (isNaN(Number(id))) {
     return <Navigate to="/" />;
@@ -55,6 +55,7 @@ const Product = () => {
               >
                 Remove from cart
               </Add>
+              <Add onClick={() => navigate("/products")}>Close</Add>
             </Info>
           </Grid>
         </Wrapper>

@@ -35,6 +35,18 @@ const Icon = styled.div`
   cursor: ${(props) => props.cursor};
 `;
 
+const Span = styled.span`
+  position: ${(props) => props.position};
+  background: ${(props) => props.background};
+  border-radius: ${(props) => props.radius};
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+  text-align: ${(props) => props.text};
+  top: ${(props) => props.top};
+  right: ${(props) => props.right};
+  display: ${(props) => props.display};
+`;
+
 const Wrapper = styled.div`
   width: 100%;
   max-width: 1440px;
@@ -44,4 +56,4 @@ const Wrapper = styled.div`
   }
 `;
 
-export { Container, GlobalLink, Icon, Wrapper, Div };
+export { Container, GlobalLink, Icon, Wrapper, Div, Span };

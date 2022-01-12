@@ -24,11 +24,13 @@ export const Name = styled.p`
   color: white;
   text-transform: capitalize;
   padding: 10px;
+  font-size: 1.1em;
 `;
 
 export const Price = styled.p`
   color: white;
   padding: 10px;
+  font-size: 1.1em;
 `;
 
 export const Button = styled.div`
@@ -41,6 +43,7 @@ export const Btn = styled.button`
   background: transparent;
   border: 3px solid ${primary};
   font-weight: 600;
+  font-size: 1.1em;
   cursor: pointer;
   :hover {
     background: ${primary};

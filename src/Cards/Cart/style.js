@@ -50,6 +50,7 @@ export const Button = styled.button`
   height: 30px;
   font-size: 1.2em;
   font-weight: 600;
+  background: white;
   cursor: pointer;
   transition: all 0.3s ease;
   :hover {
