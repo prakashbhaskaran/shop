@@ -6,7 +6,7 @@ const Container = styled.div`
   padding: 120px;
   background: ${(props) => props.background};
   @media screen and (max-width: 540px) {
-    padding: 120px 10px;
+    padding: 80px 10px;
   }
 `;
 

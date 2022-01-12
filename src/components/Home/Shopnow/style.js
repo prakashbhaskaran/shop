@@ -12,6 +12,9 @@ export const Background = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media screen and (max-width: 540px) {
+    min-height: 580px;
+  }
 `;
 export const Button = styled(Link)`
   color: white;

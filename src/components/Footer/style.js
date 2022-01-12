@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-  margin: 150px 0;
   display: grid;
   grid-column-gap: 50px;
   grid-row-gap: 50px;
