@@ -9,7 +9,7 @@ const Product = () => {
   const { items, addtocart, removefromcart } = useContext(ProductContext);
   const { id } = useParams();
   const navigate = useNavigate();
-  
+
   let item = items.filter((item) => item.productid === Number(id));
   if (isNaN(Number(id))) {
     return <Navigate to="/" />;
@@ -56,7 +56,13 @@ const Product = () => {
               >
                 Remove from cart
               </Add>
-              <Add onClick={() => navigate(-1)}>Close</Add>
+              <Add
+                onClick={() => {
+                  navigate(-1);
+                }}
+              >
+                Go back
+              </Add>
             </Info>
           </Grid>
         </Wrapper>
