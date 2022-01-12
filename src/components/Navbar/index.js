@@ -19,12 +19,7 @@ const Navbar = () => {
       </GlobalLink>
 
       <Div>
-        <List
-          click={click}
-          onClick={() => {
-            setClick(!click);
-          }}
-        >
+        <List click={click}>
           <ListItem>
             <GlobalLink
               to="/"
