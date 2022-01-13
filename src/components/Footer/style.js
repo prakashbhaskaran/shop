@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Main = styled.div`
   display: grid;
-  grid-column-gap: 50px;
-  grid-row-gap: 50px;
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
   grid-template-columns: auto auto auto auto;
   @media screen and (max-width: 1279px) {
     grid-template-columns: auto auto;
@@ -16,7 +16,7 @@ export const Main = styled.div`
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1em;
 `;
 
 export const Heading = styled.h2`
@@ -27,12 +27,12 @@ export const Heading = styled.h2`
 export const Items = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.2em;
   color: white;
 `;
 export const Mail = styled.input`
   max-width: 100%;
-  height: 40px;
+  min-height: 40px;
   padding-left: 10px;
   outline: none;
   border: hidden;

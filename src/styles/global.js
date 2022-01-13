@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { primary } from "./Color";
 
 const Container = styled.div`
-  padding: 120px;
+  padding: 8em;
   background: ${(props) => props.background};
   @media screen and (max-width: 540px) {
-    padding: 80px 10px;
+    padding: 4em 1em;
   }
 `;
 

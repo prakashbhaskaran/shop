@@ -4,7 +4,7 @@ import { primary } from "../../../styles/Color";
 
 export const Background = styled.div`
   width: 100%;
-  min-height: 720px;
+  min-height: 640px;
   display: flex;
   justify-content: center;
   align-items: center;
