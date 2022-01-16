@@ -4,6 +4,7 @@ import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { Add, Grid, Image, Info, Name, Price } from "./style";
 import { Container, Wrapper, Img } from "../../styles/global";
 import Layout from "../../Layout";
+import { Helmet } from "react-helmet";
 
 const Product = () => {
   const { items, addtocart, removefromcart } = useContext(ProductContext);
@@ -17,7 +18,9 @@ const Product = () => {
 
   return (
     <Layout>
-      {" "}
+      <Helmet>
+        <title>Product - {id}</title>
+      </Helmet>
       <Container background={"black"}>
         <Wrapper>
           <Grid>

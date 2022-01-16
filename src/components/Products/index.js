@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Helmet } from "react-helmet";
 import Card from "../../Cards/Product";
 import { ProductContext } from "../../Context/ProductProvider";
 import Layout from "../../Layout";
@@ -10,6 +11,9 @@ const Products = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Products</title>
+      </Helmet>
       <Container background="black">
         <Grid>
           {items.map((item) => {

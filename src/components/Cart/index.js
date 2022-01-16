@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Helmet } from "react-helmet";
 import Card from "../../Cards/Cart";
 import { ProductContext } from "../../Context/ProductProvider";
 import { Container, Div, GlobalLink, Wrapper } from "../../styles/global";
@@ -9,6 +10,9 @@ const Cart = () => {
 
   return (
     <Div>
+      <Helmet>
+        <title>Cart</title>
+      </Helmet>
       <Navbar />
       <Container>
         {saved.length !== 0 ? (
